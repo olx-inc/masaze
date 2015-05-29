@@ -16,7 +16,7 @@ class MailTemplates {
                         </tr>
                         <tr>
                             <td>
-                                <table style="border-collapse:collapse;text-align:left;border-radius:5px 5px 0 0;background-color:#ffffff;min-width:330px;max-width:100%" border="0" cellpadding="0" cellspacing="0">
+                                <table style="border-collapse:collapse;text-align:left;border-radius:5px 5px 0 0;background-color:#ffffff;min-width:330px;max-width:100%;padding:20px;" border="0" cellpadding="0" cellspacing="0">
                                     <tbody>
                                         <tr>
                                             <td align="left" valign="top">
@@ -28,62 +28,54 @@ class MailTemplates {
                                                                     <img src="http://10.4.12.27:9876/images/logo.png" alt="OLX" width="200" height="65" border="0" style="display:block;margin-right:10px" />
                                                                 </a>
                                                             </td>
+                                                            <td valign="middle">
+                                                                <a href="" style="text-decoration:none;color:#000000!important;font-size:18px;font-family:Arial,helvetica,sans-serif" target="_blank"><strong></strong></a>
+                                                            </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="left" valign="top" width="100%" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px">
-                                                <table width="100%" style="border-collapse:collapse;text-align:left" border="0" cellpadding="0" cellspacing="0">
+                                            <td>
+                                                <table style="width:660px;height:400px;padding:20px;" align="center" cellpadding="0" cellspacing="0">
                                                     <tbody>
-                                                        <tr>
-                                                            <td valign="top" style="width:100%">
-                                                                <table border="0" cellpadding="0" cellspacing="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" style="padding-top:22px;padding-bottom:22px;font-size:31px;font-family:Arial,helvetica,sans-serif">
-                Reserva tu turno para masages!
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td valign="top" style="padding-bottom:30px;font-size:13px;line-height:1.3">
-                Hola <<USERNAME>>:
-                                                                                <br>
-                                                                                <p>
-            Haciendo click en el siguiente link vas a entrar en el sistema de reserva de turnos.
-                                                                                </p>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
+                                                        <tr style="display:block;padding-bottom:25px;text-align:left;font-family:Arial,helvetica,sans-serif;">
+                                                            <td>
+                                                                <p style="padding-top:20px">Hola <<USERNAME>>:</p>
+                                                                <P>Te invitamos a disfrutar de una pausa revitalizadora...</p>
+                                                                <h3 style="font-size:32px;margin:15px 0px;text-align:center">MASSAGE AT WORK!!!</h3>
+                                                                <p>Está comprobado que una rutina de masajes alivia las tensiones del cuerpo y revitaliza nuestra energía creando una sensación de gran bienestar.</p>
+                                                                <p style="padding-top:20px;text-align:center">Podes disfrutar de sesiones de masajes en las oficinas de OLX,</p>
+                                                                <p style="text-align:center;font-weight:bold">
+                                                                    Martes 14:15 a 18 hrs.</p>
+                                                                <p style="text-align:center;font-weight:bold">
+                                                                    Viernes de 14:30 a 17:30 hrs.</p>
+                                                                <p style="padding-top:20px">“Quick Massage”, es un masaje descontracturante que cubre las áreas del cuello, espalda, hombros, brazos, manos y cabeza.</p>
+                                                                <p>El mismo es realizado por un profesional altamente calificado en una silla especialmente diseñada y tiene una duración de 15’.</p>
                                                             </td>
                                                         </tr>
                                                         <tr>
-
+                                                            <td style="text-align:center;padding:30px;">
+                                                                <a href="http://10.4.12.27:9876/massage_landing.php?w=<<EMAILTO>>" style="display:inline-block;color:#ffffff;padding-top:12px;padding-bottom:12px;padding-left:20px;padding-right:20px;background-color:#29aae1;text-decoration:none;border-radius:5px;font-family:Arial,helvetica,sans-serif;font-size:16px;font-weight:bold;text-align:center;vertical-align:top;margin-right:10px;border-bottom:3px solid #057ea8" target="_blank">Reservalo ahora</a>
+                                                            </td>
                                                         </tr>
                                                         <tr>
-                                                            <td valign="top" style="height:10px"></td>
+                                                            <td style="margin-top:20px;background-color:#d5eaef;padding:10px;font-weight:bold;text-align:left;font-family:Arial,helvetica,sans-serif;">
+                                                                <p>A TENER EN CUENTA:</p>
+                                                                <ul style="list-style-position:initial;padding-left:25px">
+                                                                    <li style="margin-bottom:10px">
+                                                                        Se abonará un co-pago de $5 -con cambio, sin excepción- que se entregará directamente al masajista.</li>
+                                                                    <li>Solo se atenderá con reserva previa enviando un mail a <a href="mailto:melina.couto@olx.com" target="_blank">melina.couto@olx.com</a></li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><img src="http://design.olx.com/public/HR/images/img-mass.jpg" alt="foto1" style="margin-top:20px" class="CToWUd"></td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <table width="100%" style="border-collapse:collapse;text-align:left" border="0" cellpadding="0" cellspacing="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="center" align="center" style="width:100%%;padding-top:10px;padding-bottom:10px;">
-                                                                                <a href="http://10.4.12.27:9876/massage_landing.php?w=<<EMAILTO>>" style="display:inline-block;color:#ffffff;padding-top:12px;padding-bottom:12px;padding-left:20px;padding-right:20px;background-color:#ff7700;text-decoration:none;border-radius:5px;font-family:Arial,helvetica,sans-serif;font-size:16px;font-weight:bold;text-align:center;vertical-align:top;margin-right:10px;border-bottom:3px solid #c25c00" target="_blank">Reservalo ahora</a>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td valign="top" style="height:10px"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td align="left" style="padding-bottom:20px;font-family:Arial,helvetica,sans-serif;color:#000000;font-size:13px">
-                Gracias por usar masaże.
+                                                                <p style="font-size:22px;font-weight:bold;margin-bottom:20px;font-family:Arial,helvetica,sans-serif;">OLX desea que lo disfrutes.... No te lo pierdas!</p>
                                                             </td>
                                                         </tr>
                                                     </tbody>
