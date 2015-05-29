@@ -1,7 +1,7 @@
 <?php
 	$email = $_GET["w"];
 	if (empty($email)) {
-		header("Location: error.php");
+		header("Location: massage_landing_error.php");
 		die();
 	} ´
 ?>
