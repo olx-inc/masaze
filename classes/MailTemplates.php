@@ -136,7 +136,7 @@ class MailTemplates {
                                                                         </tr>
                                                                         <tr>
                                                                             <td valign="top" style="padding-bottom:30px;font-size:13px;line-height:1.3;font-family:Arial,helvetica,sans-serif">
-                Hola USUARIO:
+                Hola <<USERNAME>>:
                                                                                 <br>
                                                                                 <p>
             Hemos reservado este turno para vos:
