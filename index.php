@@ -1,6 +1,6 @@
 <?php
 
-  require_once "classes/hem.php";
+  require_once($_SERVER["DOCUMENT_ROOT"]."/classes/hem.php");
 
   $hem = new ClassHEM();
 
