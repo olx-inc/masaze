@@ -138,7 +138,7 @@ class MailTemplates {
                 Hola <<USERNAME>>!
                                                                                 <br>
                                                                                 
-                    <h1>Tenemos una buena noticia para vos: Hoy tenés una pausa revitalizadora a las <<APPOINTMENT>></h1>
+                    <h1>Tenemos una buena noticia para vos: Hoy tenés una pausa revitalizadora!</h1>
                     <br/><br/> <p> Por favor recordá llegar a horario y traer un co-pago de $5. 
 
                                                                                 </p>
