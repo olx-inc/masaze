@@ -27,8 +27,8 @@ if ($connection->connect_error) {
 		
 		if ($result2 = $connection->query("insert ignore into masaze_appointments(user_id, sent) values($user_id, 0);")) {
 			$result_status = 3;
-			$result_message_title = "Success!";
-			$result_message_desc = "We'll send you an email with the details of your appointment very soon :)";
+			$result_message_title = "Thank you";
+			$result_message_desc = "We have received your request. If you get selected you will receive an E-mail notification soon!";
 		} else {
 			$result_status = 4;
 			$result_message_title = "Oops!";
