@@ -47,23 +47,24 @@ if ($connection->connect_error) {
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>masaże :: Appointment system</title>
-        <link rel="stylesheet" type="text/css" href="../css/styles.css">
-    </head>
-    <body>
-        <div class="wrapper">
-            <header>
-                <div class="header-logo">
-                    <img src="../images/logo.png" alt="masaże logo" />
-                </div>
-            </header>
-            <section class="notifications icons icon-check-round">
-                <h2><?php echo $result_message_title ?></h2>
-                <p><?php echo $result_message_desc ?></p>
-            </section>
-        </div>
-    </body>
+	<head>
+		<meta charset="UTF-8">
+		<title>masaże :: Appointment system</title>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<div class="header-logo">
+					<img src="../images/logo.png" alt="masaże logo" />
+				</div>
+			</header>
+			<section class="notifications icons icon-check-round">
+				<h2><?php echo $result_message_title ?></h2>
+				<p><?php echo $result_message_desc ?></p>
+			</section>
+		</div>
+	</body>
 </html>
 
 
