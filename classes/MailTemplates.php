@@ -25,7 +25,7 @@ class MailTemplates {
                                                         <tr>
                                                             <td width="41" valign="middle" style="padding-left:20px;padding-top:10px;padding-bottom:10px">
                                                                 <a href="" target="_blank">
-                                                                    <img src="http://static04.olx-st.com/email/emerging/assets/images/olx_logo.gif" alt="OLX" width="41" height="41" border="0" style="display:block;margin-right:10px" class="CToWUd">
+                                                                    <img src="http://10.4.12.27:9876/images/logo.png" alt="OLX" width="200" height="65" border="0" style="display:block;margin-right:10px" />
                                                                 </a>
                                                             </td>
                                                             <td valign="middle">
@@ -124,7 +124,7 @@ class MailTemplates {
                                                         <tr>
                                                             <td width="41" valign="middle" style="padding-left:20px;padding-top:10px;padding-bottom:10px">
                                                                 <a href="" target="_blank">
-                                                                    <img src="http://static04.olx-st.com/email/emerging/assets/images/olx_logo.gif" alt="OLX" width="41" height="41" border="0" style="display:block;margin-right:10px" class="CToWUd">
+                                                                    <img src="http://10.4.12.27:9876/images/logo.png" alt="OLX" width="200" height="65" border="0" style="display:block;margin-right:10px" />
                                                                 </a>
                                                             </td>
                                                             <td valign="middle">
