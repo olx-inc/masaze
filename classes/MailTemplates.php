@@ -57,7 +57,7 @@ class MailTemplates {
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:center;padding:30px;">
-                                                                <a href="http://10.4.12.27:9876/massage_landing.php?w=<<EMAILTO>>" style="display:inline-block;color:#ffffff;padding-top:12px;padding-bottom:12px;padding-left:20px;padding-right:20px;background-color:#29aae1;text-decoration:none;border-radius:5px;font-family:Arial,helvetica,sans-serif;font-size:16px;font-weight:bold;text-align:center;vertical-align:top;margin-right:10px;border-bottom:3px solid #057ea8" target="_blank">Reservalo ahora</a>
+                                                                <a href="http://10.4.12.27:9876/massage_landing_1.php?w=<<EMAILTO>>" style="display:inline-block;color:#ffffff;padding-top:12px;padding-bottom:12px;padding-left:20px;padding-right:20px;background-color:#29aae1;text-decoration:none;border-radius:5px;font-family:Arial,helvetica,sans-serif;font-size:16px;font-weight:bold;text-align:center;vertical-align:top;margin-right:10px;border-bottom:3px solid #057ea8" target="_blank">Reservalo ahora</a>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -66,7 +66,7 @@ class MailTemplates {
                                                                 <ul style="list-style-position:initial;padding-left:25px">
                                                                     <li style="margin-bottom:10px">
                                                                         Se abonará un co-pago de $5 -con cambio, sin excepción- que se entregará directamente al masajista.</li>
-                                                                    <li>Solo se atenderá con reserva previa enviando un mail a <a href="mailto:melina.couto@olx.com" target="_blank">melina.couto@olx.com</a></li>
+                                                                    <li>Para solicitar tu reserva click en "Reservalo Ahora"</li>
                                                                 </ul>
                                                             </td>
                                                         </tr>
