@@ -27,8 +27,8 @@ if ($connection->connect_error) {
 		
 		if ($result2 = $connection->query("insert ignore into masaze_appointments(user_id, sent) values($user_id, 0);")) {
 			$result_status = 3;
-			$result_message_title = "Success!";
-			$result_message_desc = "We'll send you an email with the details of your appointment very soon :)";
+			$result_message_title = "Thank you";
+			$result_message_desc = "We have received your request. If you get selected you will receive an E-mail notification soon!";
 		} else {
 			$result_status = 4;
 			$result_message_title = "Oops!";
@@ -47,23 +47,24 @@ if ($connection->connect_error) {
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>masaże :: Appointment system</title>
-        <link rel="stylesheet" type="text/css" href="../css/styles.css">
-    </head>
-    <body>
-        <div class="wrapper">
-            <header>
-                <div class="header-logo">
-                    <img src="../images/logo.png" alt="masaże logo" />
-                </div>
-            </header>
-            <section class="notifications icons icon-check-round">
-                <h2><?php echo $result_message_title ?></h2>
-                <p><?php echo $result_message_desc ?></p>
-            </section>
-        </div>
-    </body>
+	<head>
+		<meta charset="UTF-8">
+		<title>masaże :: Appointment system</title>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<div class="header-logo">
+					<img src="../images/logo.png" alt="masaże logo" />
+				</div>
+			</header>
+			<section class="notifications icons icon-check-round">
+				<h2><?php echo $result_message_title ?></h2>
+				<p><?php echo $result_message_desc ?></p>
+			</section>
+		</div>
+	</body>
 </html>
 
 
