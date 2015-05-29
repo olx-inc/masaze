@@ -1,4 +1,4 @@
-<?
+<?php
 
 /**
  *
@@ -14,7 +14,7 @@ class ClassHEM
 
   public function selectCandidates($list=array()) {
     $assignees = array();
-    
+
     return $assignees;
   }
 
