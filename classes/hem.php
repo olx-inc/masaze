@@ -16,17 +16,24 @@ class ClassHEM
     $candidates = $this->userModel->getCandidateUsers();
 
     $i = 0;
-    while ($i < $appoimentCount) {
-      $assignees[] = $candidates[$i];
-      unset($candidates[$i]);
-      $i++;
+
+    if ( ! empty($candidates)) {
+      while ($i < $appoimentCount) {
+        $assignees[] = $candidates[$i];
+        unset($candidates[$i]);
+        $i++;
+      }
     }
 
     // Update candiates
-    $this->updateAssignees($assignees);
+    if ( ! empty($assignees)) {
+      $this->updateAssignees($assignees);
+    }
 
     // Update candiates
-    $this->updateDiscarded($candidates);
+    if ( ! empty($candidates)) {
+      $this->updateDiscarded($candidates);
+    }
   }
 
   private function updateAssignees($assignees=array()) {
@@ -35,8 +42,9 @@ class ClassHEM
     $value = 1;
     foreach ($assignees as $assignee) {
       $userId = $assignee["id"];
-      $this->userModel->updateScore($userId, -1);
-      $this->userModel->updateAppoimentElegible($userId, $value);
+      // echo "userId: $userId";
+      // $this->userModel->updateScore($userId, -1);
+      // $this->userModel->updateAppoimentElegible($userId, $value);
     }
 
   }
@@ -46,7 +54,7 @@ class ClassHEM
     // masaze_appointments.elegible = 0;
     $value = 0;
     foreach ($candidates as $candidate) {
-      $userId = $assignee["id"];
+      $userId = $candidate["id"];
       $this->userModel->updateScore($userId, 1);
       $this->userModel->updateAppoimentElegible($userId, $value);
     }
