@@ -4,4 +4,9 @@
 
   $hem = new ClassHEM();
 
+  $candidates = array();
+
+  $assignees = $hem->selectCandidates($candidates);
+
+  print_r($assignees);
 ?>
