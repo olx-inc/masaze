@@ -24,7 +24,8 @@ class ClassHEM
         $i++;
       }
     }
-/*
+
+
     echo "<pre>";
     print_r($assignees);
     echo "</pre>";
@@ -32,7 +33,7 @@ class ClassHEM
     echo "<pre>";
     print_r($candidates);
     echo "</pre>";
-*/
+
     // Update candiates
     if ( ! empty($assignees)) {
       $this->updateAssignees($assignees);
