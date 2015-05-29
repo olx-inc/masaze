@@ -1,8 +1,9 @@
 <?php
 
 $base = '/Users/dev/Sites/masaze/';
-require($base . "cron/lib/phpmailer/class.phpmailer.php");
-require($base . "db/dbConnection.php");
+require_once ($base . "cron/lib/phpmailer/class.phpmailer.php");
+require_once ($base . "db/dbConnection.php");
+require_once ($base . "classes/MailTemplates.php");
 
 class MailSendCron {
     const MAIL_FROM = 'massages@olx.com';
@@ -110,21 +111,22 @@ class MailSendCron {
             </td>
         </tr>
     </tbody>
-</table>
-';
+</table>';
 
     const SMTP_HOST_1 = "mail-server";
 
     const SMTP_SERVER =  "smtp.betaolx.com.ar";
 
-    public function __construct() {
-        $this->init();
+    public function __construct($mailType) {
+        $this->init($mailType);
     }
 
-    public function init() {
+    public function init($mailType) {
         $mailList = $this->getMailList();
 
         $mailer = $this->createMailer();
+
+        $mailTemplate = $this->getMailTemplate($mailType);
 
         foreach ($mailList as $mail) {
             $toAddress = $mail;
@@ -132,11 +134,12 @@ class MailSendCron {
             $mailer->FromName = self::NAME_FROM;
             $mailer->From = self::MAIL_FROM;
             $mailer->Subject = self::SUBJECT;
-            $mailer->Body = self::BODY_HTML;
+            $mailer->Body = $mailTemplate;
             $mailer->AddAddress($toAddress, $toAddress);
 
             if ($mailer -> Send()) {
                 error_log("Mail sent to: $mail - ok");
+                $this->markMailSent($mail);
             } else {
                 error_log("Error sending email to: $mail : " . $mailer -> ErrorInfo);
             }
@@ -175,6 +178,20 @@ class MailSendCron {
 
         return $execution;
     }
+
+    private function markMailSent($mail)
+    {
+        $sql = 'UPDATE masaze_appointments set sent = 1 where user_id = (SELECT id
+                FROM masaze_users WHERE email = "' . $mail . '")';
+
+        $dbConn = new dbConnection();
+        $dbConn->getInstance()->executeQueryInsert($sql);
+    }
+
+    private function getMailTemplate($mailTemplate)
+    {
+        return MailTemplates::retrieveMailTemplate($mailTemplate);
+    }
 }
 
-new MailSendCron();
+new MailSendCron($argv);
