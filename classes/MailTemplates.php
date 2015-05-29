@@ -145,7 +145,7 @@ class MailTemplates {
                                                                         </tr>
                                                                         <tr>
                                                                             <td style="background-color:#fafafa;padding:22px;font-size:31px;font-family:Arial,helvetica,sans-serif">
-                Martes 5 de abril 10:00 hs.
+                <<APPOINTMENT>>
                                                                             </td>
                                                                         </tr>
                                                                     </tbody>
