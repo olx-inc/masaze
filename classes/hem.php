@@ -12,5 +12,9 @@ class ClassHEM
     echo "hola hem";
   }
 
-  
+  public function selectCandidates($list=array()) {
+
+
+  }
+
 }
