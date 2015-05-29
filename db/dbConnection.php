@@ -30,6 +30,16 @@ class dbConnection {
         return $result;
     }
 
+    public function executeQueryInsert($query)
+    {
+        $this->getDbConnection();
+        if (!$this->link->query($query)) {
+            echo 'Could not perform query: ' . $query;
+            exit;
+        };
+
+    }
+
     private function getDbConnection()
     {
         $dbCred = $this->getDbCredentials();
