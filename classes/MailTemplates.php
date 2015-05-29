@@ -51,7 +51,7 @@ class MailTemplates {
                                                                         </tr>
                                                                         <tr>
                                                                             <td valign="top" style="padding-bottom:30px;font-size:13px;line-height:1.3">
-                Hola USUARIO:
+                Hola <<USERNAME>>:
                                                                                 <br>
                                                                                 <p>
             Haciendo click en el siguiente link vas a entrar en el sistema de reserva de turnos.
@@ -74,7 +74,7 @@ class MailTemplates {
                                                                     <tbody>
                                                                         <tr>
                                                                             <td valign="center" align="center" style="width:100%%;padding-top:10px;padding-bottom:10px;">
-                                                                                <a href="" style="display:inline-block;color:#ffffff;padding-top:12px;padding-bottom:12px;padding-left:20px;padding-right:20px;background-color:#29aae1;text-decoration:none;border-radius:5px;font-family:Arial,helvetica,sans-serif;font-size:16px;font-weight:bold;text-align:center;vertical-align:top;margin-right:10px;border-bottom:3px solid #057ea8" target="_blank">Reservalo ahora</a>
+                                                                                <a href="http://10.4.12.27:9876/massage_landing.php?w=<<EMAILTO>>" style="display:inline-block;color:#ffffff;padding-top:12px;padding-bottom:12px;padding-left:20px;padding-right:20px;background-color:#ff7700;text-decoration:none;border-radius:5px;font-family:Arial,helvetica,sans-serif;font-size:16px;font-weight:bold;text-align:center;vertical-align:top;margin-right:10px;border-bottom:3px solid #c25c00" target="_blank">Reservalo ahora</a>
                                                                             </td>
                                                                         </tr>
                                                                     </tbody>
