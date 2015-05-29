@@ -135,11 +135,14 @@ class MailTemplates {
                                                                         </tr>
                                                                         <tr>
                                                                             <td valign="top" style="padding-bottom:30px;font-size:13px;line-height:1.3;font-family:Arial,helvetica,sans-serif">
-                Hola <<USERNAME>>:
+                Hola <<USERNAME>>!
                                                                                 <br>
-                                                                                <p>
-            Hemos reservado este turno para vos:
+                                                                                
+                    <h1>Tenemos una buena noticia para vos: Hoy tenés una pausa revitalizadora a las <<APPOINTMENT>></h1>
+                    <br/><br/> <p> Por favor recordá llegar a horario y traer un co-pago de $5. 
+
                                                                                 </p>
+
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
@@ -237,7 +240,7 @@ class MailTemplates {
                                                                         <tr>
                                                                             <td valign="top" style="padding-bottom:30px;font-size:13px;line-height:1.3;font-family:Arial,helvetica,sans-serif">
                                                                                 <p>
-            No tenemos más turnos displonibles
+            Por hoy no tenemos más turnos disponibles. Pero no te preocupes, la próxima vez vas a tener más chances!
                                                                                 </p>
                                                                             </td>
                                                                         </tr>

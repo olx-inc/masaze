@@ -1,9 +1,9 @@
 <?php
-	$email = $_GET["w"];
-	if (empty($email)) {
+	$email = strtolower($_GET["w"]);
+	if (empty($email) or substr($email, -8) != "@olx.com") {
 		header("Location: massage_landing_error.php");
 		die();
-	} ´
+	}
 ?>
 <!DOCTYPE html>
 <html>

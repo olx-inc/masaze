@@ -1,11 +1,15 @@
 <?php
 
+$email = strtolower($_GET["w"]);
+if (empty($email) or substr($email, -8) != "@olx.com") {
+	header("Location: massage_landing_error.php");
+	die();
+} ´
+
 $servername = "localhost";
 $username = "mtd";
 $password = "_m7D#2015$";
 $db = "DB_MASAZE";
-
-$email = $_GET["w"];
 
 $connection = new mysqli($servername, $username, $password);
 
@@ -27,17 +31,17 @@ if ($connection->connect_error) {
 		
 		if ($result2 = $connection->query("insert ignore into masaze_appointments(user_id, elegible) values($user_id, 0);")) {
 			$result_status = 3;
-			$result_message_title = "Thank you";
-			$result_message_desc = "We have received your request. If you get selected you will receive an E-mail notification soon!";
+			$result_message_title = "Gracias!";
+			$result_message_desc = "Registramos tu solicitud. Te avisaremos por E-mail si te conseguimos una reserva.";
 		} else {
 			$result_status = 4;
 			$result_message_title = "Oops!";
-			$result_message_desc = "We weren't able to book your appointment :(";
+			$result_message_desc = "No pudimos procesar tu pedido :(";
 		}
 	} else {
 		$result_status = 2;
 		$result_message_title = "Oops!";
-		$result_message_desc = "It seems you're not registered in MAZASE :S";
+		$result_message_desc = "No estás registrado en MAZASE :S";
 	}
 	
 }
