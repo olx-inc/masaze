@@ -16,18 +16,9 @@ class dbConnection {
 
     public function executeQuery($query)
     {
-        $result = array();
-
         $this->getDbConnection();
-        $results = $this->link->query($query)->fetch_all();
 
-        foreach ($results as $data) {
-            foreach ($data as $key => $value) {
-                $result[] = $value;
-            }
-        }
-
-        return $result;
+        return $this->link->query($query)->fetch_all(MYSQLI_ASSOC);
     }
 
     public function executeQueryInsert($query)

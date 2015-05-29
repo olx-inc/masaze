@@ -80,7 +80,11 @@ class MailSendCron {
         $dbConn = new dbConnection();
         $execution = $dbConn->getInstance()->executeQuery($sql);
 
-        return $execution;
+        foreach ($execution as $result) {
+            $results[] = $result['email'];
+        }
+
+        return $results;
     }
 
     private function markMailSent($mail)
