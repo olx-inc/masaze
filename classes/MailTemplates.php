@@ -131,7 +131,6 @@ class MailTemplates {
                                                                     <tbody>
                                                                         <tr>
                                                                             <td valign="top" style="padding-top:22px;padding-bottom:22px;font-size:31px;font-family:Arial,helvetica,sans-serif">
-                Reserva tu turno para masages!
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
