@@ -230,3 +230,23 @@ body {
 .icon-zoom::before {
     content: "\65";
 }
+
+.button {
+    display:inline-block;
+    color:#ffffff;
+    padding-top:12px;
+    padding-bottom:12px;
+    padding-left:20px;
+    padding-right:20px;
+    background-color:#29aae1;
+    text-decoration:none;
+    border-radius:5px;
+    font-family:Arial,helvetica,sans-serif;
+    font-size:16px;
+    font-weight:bold;
+    text-align:center;
+    vertical-align:top;
+    margin-right:10px;
+    border-bottom:3px solid #057ea8;
+}
+
