@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f3f3f3;
+    font-family: Arial, helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: 'olx-icon-font';
+    src: url(olx-icon-font-9.eot);
+    src: url(olx-icon-font-9.eot?#iefix) format('embedded-opentype'),
+         url(olx-icon-font-9.woff) format('woff'),
+         url(olx-icon-font-9.ttf) format('truetype'),
+         url(olx-icon-font-9.svg#olx-icon-font-9regular) format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+.wrapper {
+    color: #333333;
+    background: #ffffff;
+    border-radius: 3px;
+    margin: 30px;
+    padding: 30px;
+}
+
+.notifications {
+    margin-top: 30px;
+    background: #e8f6ff;
+    border-color: #bde;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 20px 20px 20px 100px;
+    margin-bottom: 20px;
+    position: relative;
+    min-height: 50px;
+}
+.notifications.icons::before {
+    color: #29aae1;
+    font-size: 50px;
+    position: absolute;
+    margin-left: -61px;
+}
+
+.icons::before {
+    display: inline-block;
+    font-family: 'olx-icon-font';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    speak: none;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-addpicture::before {
+    content: "\66";
+}
+.icon-arrow::before {
+    content: "\63";
+}
+.icon-arrow-down::before {
+    content: "\63";
+    transform(rotate(90deg));
+}
+.icon-arrow-left::before {
+    content: "\63";
+    transform(rotate(180deg));
+}
+.icon-arrow-right::before {
+    content: "\63";
+}
+.icon-arrow-up::before {
+    content: "\63";
+    transform(rotate(270deg));
+}
+.icon-arrow-down::before {
+    content: "\63";
+    transform(rotate(90deg));
+}
+.icon-bigger::before {
+    content: "e";
+}
+.icon-camera-more::before {
+    content: "\66";
+}
+.icon-camera::before {
+    content: "\67";
+}
+.icon-chat::before {
+    content: "\69";
+}
+.icon-cellphones::before {
+    content:"\68";
+}
+.icon-check::before {
+    content: "\6a";
+}
+.icon-check-round::before {
+    content: "\e617";
+}
+.icon-clock::before {
+    content:"\6c";
+}
+.icon-close::before {
+    content: "\e604";
+}
+.icon-community::before {
+    content:"\6e";
+}
+.icon-community2::before {
+    content:"\e603";
+}
+.icon-description::before {
+    content: "\e610";
+}
+.icon-earth::before {
+    content:"\e601";
+}
+.icon-edit::before {
+    content: "\e60f";
+}
+.icon-envelope::before {
+    content: "\6f"
+}
+.icon-exclamation::before {
+    content: "\e60c";
+}
+.icon-facebook::before {
+    content: "\73";
+}
+.icon-fb-round::before {
+    content: "\72";
+}
+.icon-gallery::before {
+    content: "\76";
+}
+.icon-googleplus::before {
+    content: "\79";
+}
+.icon-happy::before {
+    content: "\7a";
+}
+.icon-help-round::before {
+    content: "\3c";
+}
+.icon-lamp::before {
+    content:"\e60b";
+}
+.icon-like::before {
+    content:"\e60d";
+}
+.icon-list::before {
+    content: "\2e";
+}
+.icon-lock::before {
+    content: "\2c";
+}
+.icon-mobile::before {
+    content:"\e602";
+}
+.icon-money-round::before {
+    content:"\e600";
+}
+.icon-more::before {
+    content: "\25";
+}
+.icon-olx::before {
+    content: "\ba";
+}
+.icon-phone::before {
+    content: "\22";
+}
+.icon-photo::before {
+    content: "\67";
+}
+.icon-press::before {
+    content: "\e60a";
+}
+.icon-phone-round::before {
+    content: "\e609";
+}
+.icon-piggy-bank::before {
+    content:"\e60e";
+}
+.icon-play::before {
+    content: "\24";
+}
+.icon-pin::before {
+    content: "\b7";
+}
+.icon-question::before {
+    content: "\60";
+}
+.icon-sad::before {
+    content: "\28";
+}
+.icon-search::before {
+    content: "\29";
+}
+.icon-sketchyarrow::before {
+    content: "\62";
+}
+.icon-star-circle::before {
+    content: "\e607";
+}
+.icon-tag::before {
+    content: "\2a";
+}
+.icon-time::before {
+    content: "\6c";
+}
+.icon-trash::before {
+    content: "\5e";
+}
+.icon-twitter::before {
+    content: "\a8";
+}
+.icon-user::before {
+    content: "\5f";
+}
+.icon-youtube::before {
+    content: "\3e";
+}
+.icon-zoom::before {
+    content: "\65";
+}
