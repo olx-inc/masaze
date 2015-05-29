@@ -24,7 +24,15 @@ class ClassHEM
         $i++;
       }
     }
+/*
+    echo "<pre>";
+    print_r($assignees);
+    echo "</pre>";
 
+    echo "<pre>";
+    print_r($candidates);
+    echo "</pre>";
+*/
     // Update candiates
     if ( ! empty($assignees)) {
       $this->updateAssignees($assignees);
@@ -42,9 +50,8 @@ class ClassHEM
     $value = 1;
     foreach ($assignees as $assignee) {
       $userId = $assignee["id"];
-      // echo "userId: $userId";
-      // $this->userModel->updateScore($userId, -1);
-      // $this->userModel->updateAppoimentElegible($userId, $value);
+      $this->userModel->updateScore($userId, -1);
+      $this->userModel->updateAppoimentElegible($userId, $value);
     }
 
   }
