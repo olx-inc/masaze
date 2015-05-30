@@ -141,16 +141,7 @@ class MailSendCron {
 
     private function getMailTemplate($mailType, $mail)
     {
-	if ($mailType === 1) {
-		$pattern = "<<EMAILTO>>";
-		$patternUserName = "<<USERNAME>>";
-		$pos = strpos($mail, "@");
-		$userName = substr($mail, 0, $pos);
-		$template = str_replace($patternUserName, $userName, MailTemplates::retrieveMailTemplate($mailType));
-		$template2 = str_replace($pattern, $mail, $template);
-
-		return $template2;
-	} else {
+	if ($mailType === 2) {
 		$pattern = "<<EMAILTO>>";
 		$patternUserName = "<<USERNAME>>";
 		$patternAppointment = "<<APPOINTMENT>>";
@@ -161,7 +152,15 @@ class MailSendCron {
 		$template3 = str_replace($patternAppointment, $mail['time_schedules'], $template2);
 
 		return $template3;
+	} else {
+		$pattern = "<<EMAILTO>>";
+		$patternUserName = "<<USERNAME>>";
+		$pos = strpos($mail, "@");
+		$userName = substr($mail, 0, $pos);
+		$template = str_replace($patternUserName, $userName, MailTemplates::retrieveMailTemplate($mailType));
+		$template2 = str_replace($pattern, $mail, $template);
 
+		return $template2;
 	}
     }
 
