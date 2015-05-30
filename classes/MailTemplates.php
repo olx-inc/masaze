@@ -140,9 +140,9 @@ class MailTemplates {
                                                                             <td valign="top" style="padding-bottom:30px;font-size:13px;line-height:1.3;font-family:Arial,helvetica,sans-serif">
                 Hola <<USERNAME>>,
                                                                                 <br>
-                                                                                
+
                     <h1>Tenemos una buena noticia para vos:<br/><br/>¡Hoy tenés una pausa revitalizadora!</h1>
-                    <br/><br/>  
+                    <br/><br/>
 
                                                                                 </p>
 
@@ -184,6 +184,21 @@ class MailTemplates {
                 <p>Por favor recordá llegar a horario y traer un co-pago de $5.</p>
                                                             </td>
                                                         </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <table width="100%" style="border-collapse:collapse;text-align:left" border="0" cellpadding="0" cellspacing="0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td valign="center" align="center" style="width:100%%;padding-top:10px;padding-bottom:10px;">
+                                                                              <<SCHEDULED>>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
                                                     </tbody>
                                                 </table>
                                             </td>

@@ -63,11 +63,16 @@ class ProcessEvent {
             }
         } else {
             foreach ($mailList as $mail) {
+              $mailType = $this->getMailTypeFromAction($mail);
+              $this->setEmailLists($mailType, $mail);
+            }
+
+            foreach ($mailList as $mail) {
                 $this->mailer = $this->createMailer();
                 $toAddress = $mail['email'];
                 $mailType = $this->getMailTypeFromAction($mail);
                 $mailTemplate = $this->getMailTemplate($mailType, $mail);
-                $this->setEmailLists($mailType, $mail);
+                // $this->setEmailLists($mailType, $mail);
                 $this->mailer->Sender = self::MAIL_FROM;
                 $this->mailer->FromName = self::NAME_FROM;
                 $this->mailer->From = self::MAIL_FROM;
@@ -158,13 +163,22 @@ class ProcessEvent {
       	$pattern = "<<EMAILTO>>";
       	$patternUserName = "<<USERNAME>>";
       	$patternAppointment = "<<APPOINTMENT>>";
+        $patternSchedule = "<<SCHEDULED>>";
       	$pos = strpos($mail['email'], "@");
       	$userName = substr($mail['email'], 0, $pos);
       	$template = str_replace($patternUserName, $userName, MailTemplates::retrieveMailTemplate($mailType));
-      	$template2 = str_replace($pattern, $mail['email'], $template);
-      	$template3 = str_replace($patternAppointment, $mail['time_schedules'], $template2);
+        $template = str_replace($pattern, $mail['email'], $template);
+        $template = str_replace($patternAppointment, $mail['time_schedules'], $template);
 
-      	return $template3;
+        $scheduled = "<ul>";
+        foreach ($this->emailListSelected as $row) {
+          $scheduled .= "<li>" . $row['time_schedules'] . " - " . $row['email']  . "</li>";
+        }
+        $scheduled .= "</ul>";
+
+        $template = str_replace($patternSchedule, $scheduled, $template);
+
+      	return $template;
       }
     }
 
