@@ -18,7 +18,7 @@ class Models_User {
     $this->daUser->updateScore($userId, $increment);
   }
 
-  public function updateAppoimentElegible($userId, $value=0) {
-    $this->daUser->updateAppoimentElegible($userId, $value);
+  public function updateAppoimentElegible($userId, $scheduleId) {
+    $this->daUser->updateAppoimentElegible($userId, $scheduleId);
   }
 }

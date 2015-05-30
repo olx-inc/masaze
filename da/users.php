@@ -27,9 +27,10 @@ class Da_Users {
 
   }
 
-  public function updateAppoimentElegible($userId, $value=0) {
+  public function updateAppoimentElegible($userId, $scheduleId) {
     $sql = 'UPDATE masaze_appointments
-              SET elegible = '. $value .
+              SET elegible = 1,
+              id_schedule = ' . $scheduleId .
            ' WHERE user_id = ' . $userId;
 
     $dbConn = new dbConnection();
