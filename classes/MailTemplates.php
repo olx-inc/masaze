@@ -132,7 +132,7 @@ class MailTemplates {
                                                                         </tr>
                                                                         <tr>
                                                                             <td valign="top" style="padding-bottom:30px;font-size:13px;line-height:1.3;font-family:Arial,helvetica,sans-serif">
-                ¡Hola <<USERNAME>>!
+                <<USERNAME>>,
                                                                                 <br>
                                                                                 
                     <h1>Tenemos una buena noticia para vos:<br/><br/>¡Hoy tenés una pausa revitalizadora!</h1>
@@ -276,6 +276,9 @@ class MailTemplates {
                                     </tbody>
                                 </table>
                             </td>
+                        </tr>
+                         <tr>
+                            <td align="center" style="padding:20px;font-family:Arial,helvetica,sans-serif;color:#666666;font-size:11px">&nbsp;</td>
                         </tr>
                     </tbody>
                 </table>
