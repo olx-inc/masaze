@@ -191,9 +191,12 @@ class MailTemplates {
                                                                     <tbody>
                                                                         <tr>
                                                                             <td valign="center" align="center" style="width:100%%;padding-top:10px;padding-bottom:10px;">
-                                                                                <table width="100%" style="border-collapse:collapse;text-align:center" border="0" cellpadding="0" cellspacing="0">
+                                                                               <p>Si no podés asistir en el turno asignado, podés intercambiarlo con alguién. A continuación te mostramos todos los turnos asignados</p>
+                                                                                <table width="400" style="border-collapse:collapse;text-align:center" border="0" cellpadding="0" cellspacing="0">
+                                                                                <tr><td><strong>Horario</strong></td><td><strong>E-mail</strong></td>
                                                                                 <<SCHEDULED>>
                                                                                 </table>
+                                                                                <br/><br/>
                                                                             </td>
                                                                         </tr>
                                                                     </tbody>
