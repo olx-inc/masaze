@@ -190,9 +190,13 @@ class MailSendCron {
     }
 
     private function sendResultEmail() {
-      $mailTemplate = "";
+      $mailTemplate = "<b>Turnos asignados</b><br/>";
       foreach ($this->emailListSelected as $selected) {
         $mailTemplate .= $selected['email'] . ' - ' . $selected['time_schedules'] . '<br/>';
+      }
+      $mailTemplate .= "<br/><b>Lista de espera</b><br/>";
+      foreach ($this->emailListDiscarded as $discarded) {
+        $mailTemplate .= $discarded['email'] . '<br/>';
       }
 
       $this->mailer = $this->createMailer();
