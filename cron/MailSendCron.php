@@ -121,7 +121,7 @@ class MailSendCron {
             }
         } else {
             $sql = 'SELECT u.email, a.elegible, s.time_schedules FROM masaze_users u inner join masaze_appointments a on
-                (a.user_id = u.id) INNER JOIN masaze_schedules AS s ON (a.id_schedule = s.id)';
+                (a.user_id = u.id) LEFT JOIN masaze_schedules AS s ON (a.id_schedule = s.id)';
 
             $execution = $dbConn->getInstance()->executeQuery($sql);
 
