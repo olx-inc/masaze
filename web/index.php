@@ -51,7 +51,7 @@
       <?php
       if ($message != "") {
       ?>
-      <p><?php echo $message; ?></p>
+      <p class="verde"><?php echo $message; ?></p>
       <?php
       }
       ?>
