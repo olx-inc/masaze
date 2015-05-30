@@ -144,7 +144,7 @@ class MailTemplates {
                                                                         </tr>
                                                                         <tr>
                                                                             <td style="background-color:#fafafa;padding:22px;font-size:31px;font-family:Arial,helvetica,sans-serif">
-                Tu horarios es <<APPOINTMENT>> hs.
+                Tu horario es <<APPOINTMENT>> hs.
                                                                             </td>
                                                                         </tr>
                                                                     </tbody>
