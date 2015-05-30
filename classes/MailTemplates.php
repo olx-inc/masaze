@@ -25,7 +25,7 @@ class MailTemplates {
                                                         <tr>
                                                             <td width="41" valign="middle" style="padding-left:20px;padding-top:10px;padding-bottom:10px">
                                                                 <a href="" target="_blank">
-                                                                    <img src="http://10.4.12.27:9876/images/logo.png" alt="OLX" width="200" height="65" border="0" style="display:block;margin-right:10px" />
+                                                                    <img src="https://raw.githubusercontent.com/OLX-Hackathon-2015/masaze/master/web/images/logo.png" alt="OLX" width="200" height="65" border="0" style="display:block;margin-right:10px" />
                                                                 </a>
                                                             </td>
                                                             <td valign="middle">
@@ -100,9 +100,6 @@ class MailTemplates {
                 <table style="border-collapse:collapse;text-align:left;max-width:600px" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr>
-                            <td align="center" style="padding:20px;font-family:Arial,helvetica,sans-serif;color:#666666;font-size:11px">Reserva tu turno</td>
-                        </tr>
-                        <tr>
                             <td>
                                 <table style="border-collapse:collapse;text-align:left;border-radius:5px 5px 0 0;background-color:#ffffff;min-width:330px;max-width:100%" border="0" cellpadding="0" cellspacing="0">
                                     <tbody>
@@ -113,7 +110,7 @@ class MailTemplates {
                                                         <tr>
                                                             <td width="41" valign="middle" style="padding-left:20px;padding-top:10px;padding-bottom:10px">
                                                                 <a href="" target="_blank">
-                                                                    <img src="http://10.4.12.27:9876/images/logo.png" alt="OLX" width="200" height="65" border="0" style="display:block;margin-right:10px" />
+                                                                    <img src="https://raw.githubusercontent.com/OLX-Hackathon-2015/masaze/master/web/images/logo.png" alt="OLX" width="200" height="65" border="0" style="display:block;margin-right:10px" />
                                                                 </a>
                                                             </td>
                                                         </tr>
@@ -138,7 +135,7 @@ class MailTemplates {
                 ¡Hola <<USERNAME>>!
                                                                                 <br>
                                                                                 
-                    <h1>¡Tenemos una buena noticia para vos: Hoy tenés una pausa revitalizadora!</h1>
+                    <h1>Tenemos una buena noticia para vos: ¡Hoy tenés una pausa revitalizadora!</h1>
                     <br/><br/> <p> Por favor recordá llegar a horario y traer un co-pago de $5. 
 
                                                                                 </p>
@@ -203,9 +200,6 @@ class MailTemplates {
                 <table style="border-collapse:collapse;text-align:left;max-width:600px" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr>
-                            <td align="center" style="padding:20px;font-family:Arial,helvetica,sans-serif;color:#666666;font-size:11px">Reserva tu turno</td>
-                        </tr>
-                        <tr>
                             <td>
                                 <table style="border-collapse:collapse;text-align:left;border-radius:5px 5px 0 0;background-color:#ffffff;min-width:330px;max-width:100%" border="0" cellpadding="0" cellspacing="0">
                                     <tbody>
@@ -216,7 +210,7 @@ class MailTemplates {
                                                         <tr>
                                                             <td width="41" valign="middle" style="padding-left:20px;padding-top:10px;padding-bottom:10px">
                                                                 <a href="" target="_blank">
-                                                                    <img src="http://10.4.12.27:9876/images/logo.png" alt="OLX" width="200" height="65" border="0" style="display:block;margin-right:10px" />
+                                                                    <img src="https://raw.githubusercontent.com/OLX-Hackathon-2015/masaze/master/web/images/logo.png" alt="OLX" width="200" height="65" border="0" style="display:block;margin-right:10px" />
                                                                 </a>
                                                             </td>
                                                         </tr>
