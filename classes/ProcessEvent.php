@@ -7,7 +7,7 @@ require_once ($base . "classes/MailTemplates.php");
 require_once $base . "classes/hem.php";
 
 class ProcessEvent {
-    const ADMIN_MAIL_TO = 'emiliano@olx.com';
+    const ADMIN_MAIL_TO = 'damianb@olx.com';
     const ADMIN_MAIL_SUBJECT = 'Turnos concedidos';
     const MAIL_FROM = 'massages@olx.com';
     const NAME_FROM = 'massages@olx.com';
@@ -16,7 +16,7 @@ class ProcessEvent {
     const EMAIL_HOSTNAME = 'relay1.olx.com';
     const SMTP_HOST_1 = "mail-server";
     const SMTP_SERVER =  "smtp.betaolx.com.ar";
-    const SCHEDULES_COUNT = 5;
+    const SCHEDULES_COUNT = 15;
 
     protected $mailer;
     protected $emailListSelected = array();
@@ -205,11 +205,11 @@ class ProcessEvent {
     }
 
     private function sendResultEmail() {
-      $mailTemplate = "<b>Turnos asignados</b><br/>";
+      $mailTemplate = "<b>Turnos asignados:</b><br/><br/";
       foreach ($this->emailListSelected as $selected) {
         $mailTemplate .= $selected['email'] . ' - ' . $selected['time_schedules'] . '<br/>';
       }
-      $mailTemplate .= "<br/><b>Lista de espera</b><br/>";
+      $mailTemplate .= "<br/><b>Lista de espera:</b><br/><br/";
       foreach ($this->emailListDiscarded as $discarded) {
         $mailTemplate .= $discarded['email'] . '<br/>';
       }
