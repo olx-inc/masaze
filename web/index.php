@@ -36,16 +36,18 @@
 				<h2>Bienvenido !</h2>
 				<br/><br/>
 				<h4>Si querés enviar una notificación, hacé click aquí:</h4>
-				<br/><br/>
+				<br/>
 				<div class="button-content">
-					<a href="index.php?a=1" class="button">Enviar Solicitud</a>
+					<a href="index.php?a=1" class="button">Enviar Solicitudes</a>
 				</div>
         <br/>
+        <br/>
 				<h4>Si querés procesar la asignación de turnos, hacé click aquí:</h4>
-				<br/><br/>
+				<br/>
 				<div class="button-content">
 					<a href="index.php?a=2" class="button">Procesar Turnos</a>
 				</div>
+        <br/>
 			</section>
 			<br/><br/>
       <?php
