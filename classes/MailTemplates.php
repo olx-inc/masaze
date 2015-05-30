@@ -102,14 +102,14 @@ class MailTemplates {
             <td align="center">
                 <table style="border-collapse:collapse;text-align:left;max-width:600px" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
+			<tr>
+                            <td align="center" style="padding:20px;font-family:Arial,helvetica,sans-serif;color:#666666;font-size:11px">&nbsp;</td>
+                        </tr>
                         <tr>
                             <td>
                                 <table style="border-collapse:collapse;text-align:left;border-radius:5px 5px 0 0;background-color:#ffffff;min-width:330px;max-width:100%" border="0" cellpadding="0" cellspacing="0">
                                     <tbody>
-                       <tr>
-                            <td align="center" style="padding:20px;font-family:Arial,helvetica,sans-serif;color:#666666;font-size:11px">&nbsp;</td>
-                        </tr>
-                                        <tr>
+                                       <tr>
                                             <td align="left" valign="top">
                                                 <table bgcolor="#FAFAFA" width="100%" style="border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#ececec;border-radius:5px 5px 0 0" border="0" cellpadding="0" cellspacing="0">
                                                     <tbody>
@@ -138,7 +138,7 @@ class MailTemplates {
                                                                         </tr>
                                                                         <tr>
                                                                             <td valign="top" style="padding-bottom:30px;font-size:13px;line-height:1.3;font-family:Arial,helvetica,sans-serif">
-                <<USERNAME>>,
+                Hola <<USERNAME>>,
                                                                                 <br>
                                                                                 
                     <h1>Tenemos una buena noticia para vos:<br/><br/>¡Hoy tenés una pausa revitalizadora!</h1>
