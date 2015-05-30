@@ -191,7 +191,9 @@ class MailTemplates {
                                                                     <tbody>
                                                                         <tr>
                                                                             <td valign="center" align="center" style="width:100%%;padding-top:10px;padding-bottom:10px;">
-                                                                              <<SCHEDULED>>
+                                                                                <table width="100%" style="border-collapse:collapse;text-align:center" border="0" cellpadding="0" cellspacing="0">
+                                                                                <<SCHEDULED>>
+                                                                                </table>
                                                                             </td>
                                                                         </tr>
                                                                     </tbody>
