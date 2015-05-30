@@ -11,8 +11,8 @@ class ProcessEvent {
     const ADMIN_MAIL_SUBJECT = 'Turnos concedidos';
     const MAIL_FROM = 'massages@olx.com';
     const NAME_FROM = 'massages@olx.com';
-    const SUBJECT_CONFIRMED = 'Turno de Masajes Asignado';
-    const SUBJECT_INVITE = 'Te Invitamos a una Pausa...';
+    const SUBJECT_CONFIRMED = 'Turno de masajes asignado';
+    const SUBJECT_INVITE = 'Te invitamos a una pausa...';
     const EMAIL_HOSTNAME = 'relay1.olx.com';
     const SMTP_HOST_1 = "mail-server";
     const SMTP_SERVER =  "smtp.betaolx.com.ar";

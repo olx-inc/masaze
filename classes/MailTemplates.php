@@ -75,7 +75,7 @@ class MailTemplates {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <p style="font-size:22px;font-weight:bold;margin-bottom:20px;font-family:Arial,helvetica,sans-serif;">OLX desea que lo disfrutes.... ¡Note lo pierdas!</p>
+                                                                <p style="font-size:22px;font-weight:bold;margin-bottom:20px;font-family:Arial,helvetica,sans-serif;">OLX desea que lo disfrutes.... ¡N te lo pierdas!</p>
                                                             </td>
                                                         </tr>
                                                     </tbody>
