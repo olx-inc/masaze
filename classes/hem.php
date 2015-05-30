@@ -19,8 +19,10 @@ class ClassHEM
 
     $i = 0;
 
+    $items = min($appoimentCount, count($candidates));
+
     if ( ! empty($candidates)) {
-      while ($i < $appoimentCount) {
+      while ($i < $items) {
         $assignees[] = $candidates[$i];
         unset($candidates[$i]);
         $i++;

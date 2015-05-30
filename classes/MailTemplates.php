@@ -44,7 +44,7 @@ class MailTemplates {
                                                             <td>
                                                                 <p style="padding-top:20px">Hola <<USERNAME>>:</p>
                                                                 <P>Te invitamos a disfrutar de una pausa revitalizadora...</p>
-                                                                <h3 style="font-size:32px;margin:15px 0px;text-align:center">MASSAGE AT WORK!!!</h3>
+                                                                <h3 style="font-size:32px;margin:15px 0px;text-align:center">MASSAGE AT WORK</h3>
                                                                 <p>Está comprobado que una rutina de masajes alivia las tensiones del cuerpo y revitaliza nuestra energía creando una sensación de gran bienestar.</p>
                                                                 <p style="padding-top:20px;text-align:center">Podes disfrutar de sesiones de masajes en las oficinas de OLX,</p>
                                                                 <p style="text-align:center;font-weight:bold">
@@ -75,7 +75,7 @@ class MailTemplates {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <p style="font-size:22px;font-weight:bold;margin-bottom:20px;font-family:Arial,helvetica,sans-serif;">OLX desea que lo disfrutes.... No te lo pierdas!</p>
+                                                                <p style="font-size:22px;font-weight:bold;margin-bottom:20px;font-family:Arial,helvetica,sans-serif;">OLX desea que lo disfrutes.... ¡No e lo pierdas!</p>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -135,10 +135,10 @@ class MailTemplates {
                                                                         </tr>
                                                                         <tr>
                                                                             <td valign="top" style="padding-bottom:30px;font-size:13px;line-height:1.3;font-family:Arial,helvetica,sans-serif">
-                Hola <<USERNAME>>!
+                ¡Hola <<USERNAME>>!
                                                                                 <br>
                                                                                 
-                    <h1>Tenemos una buena noticia para vos: Hoy tenés una pausa revitalizadora!</h1>
+                    <h1>¡Tenemos una buena noticia para vos: Hoy tenés una pausa revitalizadora!</h1>
                     <br/><br/> <p> Por favor recordá llegar a horario y traer un co-pago de $5. 
 
                                                                                 </p>
@@ -147,7 +147,7 @@ class MailTemplates {
                                                                         </tr>
                                                                         <tr>
                                                                             <td style="background-color:#fafafa;padding:22px;font-size:31px;font-family:Arial,helvetica,sans-serif">
-                <<APPOINTMENT>>
+                Tu horarios es <<APPOINTMENT>> hs.
                                                                             </td>
                                                                         </tr>
                                                                     </tbody>
@@ -234,13 +234,13 @@ class MailTemplates {
                                                                     <tbody>
                                                                         <tr>
                                                                             <td valign="top" style="padding-top:22px;padding-bottom:22px;font-size:31px;font-family:Arial,helvetica,sans-serif">
-                Lo sentimos!
+                Lo sentimos
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
                                                                             <td valign="top" style="padding-bottom:30px;font-size:13px;line-height:1.3;font-family:Arial,helvetica,sans-serif">
                                                                                 <p>
-            Por hoy no tenemos más turnos disponibles. Pero no te preocupes, la próxima vez vas a tener más chances!
+            Por hoy no tenemos más turnos disponibles. Pero no te preocues ¡La próxima vez vas a tener más chances!
                                                                                 </p>
                                                                             </td>
                                                                         </tr>

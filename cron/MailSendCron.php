@@ -1,6 +1,6 @@
 <?php
 
-$base = '/Users/dev/Sites/masaze/';
+$base = "../";
 require_once ($base . "cron/lib/phpmailer/class.phpmailer.php");
 require_once ($base . "db/dbConnection.php");
 require_once ($base . "classes/MailTemplates.php");
@@ -64,7 +64,7 @@ class MailSendCron {
                 $toAddress = $mail['email'];
                 $mailType = $this->getMailTypeFromAction($actionType, $mail);
                 var_dump($mailType);
-                $mailTemplate = $this->getMailTemplate($mailType, $mail['email']);
+                $mailTemplate = $this->getMailTemplate($mailType, $mail);
                 $this->mailer->Sender = self::MAIL_FROM;
                 $this->mailer->FromName = self::NAME_FROM;
                 $this->mailer->From = self::MAIL_FROM;
@@ -120,8 +120,8 @@ class MailSendCron {
                 $results[] = $result['email'];
             }
         } else {
-            $sql = 'SELECT u.email, a.elegible FROM masaze_users u inner join masaze_appointments a on
-                (a.user_id = u.id)';
+            $sql = 'SELECT u.email, a.elegible, s.time_schedules FROM masaze_users u inner join masaze_appointments a on
+                (a.user_id = u.id) LEFT JOIN masaze_schedules AS s ON (a.id_schedule = s.id)';
 
             $execution = $dbConn->getInstance()->executeQuery($sql);
 
@@ -141,14 +141,27 @@ class MailSendCron {
 
     private function getMailTemplate($mailType, $mail)
     {
-        $pattern = "<<EMAILTO>>";
-        $patternUserName = "<<USERNAME>>";
-        $pos = strpos($mail, "@");
-        $userName = substr($mail, 0, $pos);
-        $template = str_replace($patternUserName, $userName, MailTemplates::retrieveMailTemplate($mailType));
-        $template2 = str_replace($pattern, $mail, $template);
+	if ($mailType === 2) {
+		$pattern = "<<EMAILTO>>";
+		$patternUserName = "<<USERNAME>>";
+		$patternAppointment = "<<APPOINTMENT>>";
+		$pos = strpos($mail['email'], "@");
+		$userName = substr($mail['email'], 0, $pos);
+		$template = str_replace($patternUserName, $userName, MailTemplates::retrieveMailTemplate($mailType));
+		$template2 = str_replace($pattern, $mail['email'], $template);
+		$template3 = str_replace($patternAppointment, $mail['time_schedules'], $template2);
 
-        return $template2;
+		return $template3;
+	} else {
+		$pattern = "<<EMAILTO>>";
+		$patternUserName = "<<USERNAME>>";
+		$pos = strpos($mail, "@");
+		$userName = substr($mail, 0, $pos);
+		$template = str_replace($patternUserName, $userName, MailTemplates::retrieveMailTemplate($mailType));
+		$template2 = str_replace($pattern, $mail, $template);
+
+		return $template2;
+	}
     }
 
     private function getMailTypeFromAction($actionType, $mail)
