@@ -209,7 +209,7 @@ class ProcessEvent {
       foreach ($this->emailListSelected as $selected) {
         $mailTemplate .= $selected['email'] . ' - ' . $selected['time_schedules'] . '<br/>';
       }
-      $mailTemplate .= "<br/><b>Lista de espera:</b><br/><br/";
+      $mailTemplate .= "<br/><b>Lista de espera:</b><br/><br/>";
       foreach ($this->emailListDiscarded as $discarded) {
         $mailTemplate .= $discarded['email'] . '<br/>';
       }
