@@ -65,6 +65,7 @@ class ProcessEvent {
             foreach ($mailList as $mail) {
               $mailType = $this->getMailTypeFromAction($mail);
               $this->setEmailLists($mailType, $mail);
+              $this->sortArray();
             }
 
             foreach ($mailList as $mail) {
@@ -72,7 +73,6 @@ class ProcessEvent {
                 $toAddress = $mail['email'];
                 $mailType = $this->getMailTypeFromAction($mail);
                 $mailTemplate = $this->getMailTemplate($mailType, $mail);
-                // $this->setEmailLists($mailType, $mail);
                 $this->mailer->Sender = self::MAIL_FROM;
                 $this->mailer->FromName = self::NAME_FROM;
                 $this->mailer->From = self::MAIL_FROM;
@@ -229,5 +229,12 @@ class ProcessEvent {
       } else {
           error_log("Error sending email to: " . $toAddress . " : " . $this->mailer->ErrorInfo);
       }
+    }
+
+    private function sortArray() {
+      foreach ($this->emailListSelected as $key => $row) {
+        $schedule[$key] = $row['time_schedules'];
+      }
+        array_multisort($schedule, SORT_ASC, $this->emailListSelected);
     }
 }
