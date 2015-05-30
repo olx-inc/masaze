@@ -115,7 +115,7 @@ class MailSendCron {
     {
         $dbConn = new dbConnection();
         if ($actionType === 1) {
-            $sql = "SELECT email FROM masaze_users";
+            $sql = "SELECT email FROM masaze_users WHERE active = 1";
 
             $execution = $dbConn->getInstance()->executeQuery($sql);
 
