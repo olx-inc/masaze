@@ -209,10 +209,10 @@ class MailSendCron {
       $this->mailer->AddAddress($toAddress, $toAddress);
 
       if ($this->mailer->Send()) {
-          error_log("Mail sent to: "  . $mail['email'] . " - ok");
+          error_log("Mail sent to: "  . $toAddress . " - ok");
           $erase = true;
       } else {
-          error_log("Error sending email to: " . $mail['email'] . " : " . $this->mailer->ErrorInfo);
+          error_log("Error sending email to: " . $toAddress . " : " . $this->mailer->ErrorInfo);
       }
     }
 }
