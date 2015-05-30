@@ -7,21 +7,19 @@ require_once ($base . "classes/MailTemplates.php");
 require_once $base . "classes/hem.php";
 
 class MailSendCron {
+    const ADMIN_MAIL_TO = 'emiliano@olx.com';
+    const ADMIN_MAIL_SUBJECT = 'Turnos concedidos';
     const MAIL_FROM = 'massages@olx.com';
-
     const NAME_FROM = 'massages@olx.com';
-
     const SUBJECT = 'Tu turno de masajes';
-
     const EMAIL_HOSTNAME = 'relay1.olx.com';
-
     const SMTP_HOST_1 = "mail-server";
-
     const SMTP_SERVER =  "smtp.betaolx.com.ar";
-
     const SCHEDULES_COUNT = 2;
 
     protected $mailer;
+    protected $emailListSelected = array();
+    protected $emailListDiscarded = array();
 
     public function __construct($actionType) {
         $this->init((int)$actionType);
@@ -34,6 +32,10 @@ class MailSendCron {
         $mailList = $this->getMailList($actionType);
 
         $this->processMails($mailList, $actionType);
+
+        if ( ! empty($this->emailListSelected)) {
+          $this->sendResultEmail();
+        }
     }
 
     private function processMails($mailList, $actionType)
@@ -65,6 +67,7 @@ class MailSendCron {
                 $mailType = $this->getMailTypeFromAction($actionType, $mail);
                 var_dump($mailType);
                 $mailTemplate = $this->getMailTemplate($mailType, $mail);
+                $this->setEmailLists($mailType, $mail);
                 $this->mailer->Sender = self::MAIL_FROM;
                 $this->mailer->FromName = self::NAME_FROM;
                 $this->mailer->From = self::MAIL_FROM;
@@ -176,6 +179,37 @@ class MailSendCron {
                     return 3;
                 }
         }
+    }
+
+    private function setEmailLists($mailType, $mail) {
+      if (2 === $mailType) {
+        $this->emailListSelected[] = $mail;
+      } elseif (3 === $mailType) {
+        $this->emailListDiscarded[] = $mail;
+      }
+    }
+
+    private function sendResultEmail() {
+      $mailTemplate = "";
+      foreach ($this->emailListSelected as $selected) {
+        $mailTemplate .= $selected['email'] . ' - ' . $selected['time_schedules'] . '<br/>';
+      }
+
+      $this->mailer = $this->createMailer();
+      $toAddress = self::ADMIN_MAIL_TO;
+      $this->mailer->Sender = self::MAIL_FROM;
+      $this->mailer->FromName = self::NAME_FROM;
+      $this->mailer->From = self::MAIL_FROM;
+      $this->mailer->Subject = self::ADMIN_MAIL_SUBJECT;
+      $this->mailer->Body = $mailTemplate;
+      $this->mailer->AddAddress($toAddress, $toAddress);
+
+      if ($this->mailer->Send()) {
+          error_log("Mail sent to: "  . $mail['email'] . " - ok");
+          $erase = true;
+      } else {
+          error_log("Error sending email to: " . $mail['email'] . " : " . $this->mailer->ErrorInfo);
+      }
     }
 }
 
