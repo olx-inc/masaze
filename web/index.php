@@ -7,12 +7,12 @@
   if (1 == $action) {
     $processEvent = new ProcessEvent($action);
     $processEvent->process();
-    $message = "Solicitud enviada con exito.";
+    $message = "Solicitudes enviadas con éxito.";
   }
   else if (2 == $action) {
     $processEvent = new ProcessEvent($action);
     $processEvent->process();
-    $message = "Turnos procesados exitosamente.";
+    $message = "Turnos procesados exitósamente.";
   }
 
 ?>
@@ -35,13 +35,13 @@
 				<br/><br/>
 				<h2>Bienvenido !</h2>
 				<br/><br/>
-				<h4>Si querés enviar una notificacion, hacé click aquí</h4>
+				<h4>Si querés enviar una notificación, hacé click aquí:</h4>
 				<br/><br/>
 				<div class="button-content">
 					<a href="index.php?a=1" class="button">Enviar Solicitud</a>
 				</div>
         <br/>
-				<h4>Si procesar la asignacion de turnos, hacé click aquí</h4>
+				<h4>Si querés procesar la asignación de turnos, hacé click aquí:</h4>
 				<br/><br/>
 				<div class="button-content">
 					<a href="index.php?a=2" class="button">Procesar Turnos</a>
