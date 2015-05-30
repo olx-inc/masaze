@@ -26,15 +26,17 @@
 			</header>
 
 			<section class="">
+				<br/><br/>
 				<h2>Hola <?php echo $email ?> !</h2>
 				<br/><br/>
-				<h2>Estar a punto de solicitar un turno de masajes. Para confirmar hacé click aquí</h2>
+				<h2>Estas a punto de solicitar tu turno de masajes. <br/> Para confirmar hacé click aquí</h2>
 				<br/><br/>
-				<a href="massage_landing_2.php?w=<?php echo $email ?>" class="button">Confirmar Solicitud</a>
-
+				<div class="button-content">
+					<a href="massage_landing_2.php?w=<?php echo $email ?>" class="button">Confirmar Solicitud</a>
+				</div>
 			</section>
 			<br/><br/>
-			<p>Tené en cuenta que no podemos garantizar tu lugar. Las vacantes son limitadas. Te informaremos por E-mail.</p>
+			<p>Tené en cuenta que no podemos garantizar tu lugar. Las vacantes son limitadas. <br/> Te informaremos por E-mail.</p>
 
 		</div>
 	</body>

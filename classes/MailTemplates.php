@@ -12,7 +12,7 @@ class MailTemplates {
                 <table style="border-collapse:collapse;text-align:left;max-width:600px" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr>
-                            <td align="center" style="padding:20px;font-family:Arial,helvetica,sans-serif;color:#666666;font-size:11px">Reserva tu turno</td>
+                            <td align="center" style="padding:20px;font-family:Arial,helvetica,sans-serif;color:#666666;font-size:11px">&nbsp;</td>
                         </tr>
                         <tr>
                             <td>
@@ -42,7 +42,7 @@ class MailTemplates {
                                                     <tbody>
                                                         <tr style="display:block;padding-bottom:25px;text-align:left;font-family:Arial,helvetica,sans-serif;">
                                                             <td>
-                                                                <p style="padding-top:20px">Hola <<USERNAME>>:</p>
+                                                                <p style="padding-top:20px"><<USERNAME>>:</p>
                                                                 <P>Te invitamos a disfrutar de una pausa revitalizadora...</p>
                                                                 <h3 style="font-size:32px;margin:15px 0px;text-align:center">MASSAGE AT WORK</h3>
                                                                 <p>Está comprobado que una rutina de masajes alivia las tensiones del cuerpo y revitaliza nuestra energía creando una sensación de gran bienestar.</p>
@@ -75,7 +75,7 @@ class MailTemplates {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <p style="font-size:22px;font-weight:bold;margin-bottom:20px;font-family:Arial,helvetica,sans-serif;">OLX desea que lo disfrutes.... ¡No e lo pierdas!</p>
+                                                                <p style="font-size:22px;font-weight:bold;margin-bottom:20px;font-family:Arial,helvetica,sans-serif;">OLX desea que lo disfrutes.... ¡Note lo pierdas!</p>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -85,6 +85,9 @@ class MailTemplates {
                                     </tbody>
                                 </table>
                             </td>
+                        </tr>
+                       <tr>
+                            <td align="center" style="padding:20px;font-family:Arial,helvetica,sans-serif;color:#666666;font-size:11px">&nbsp; </td>
                         </tr>
                     </tbody>
                 </table>
@@ -99,11 +102,14 @@ class MailTemplates {
             <td align="center">
                 <table style="border-collapse:collapse;text-align:left;max-width:600px" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
+			<tr>
+                            <td align="center" style="padding:20px;font-family:Arial,helvetica,sans-serif;color:#666666;font-size:11px">&nbsp;</td>
+                        </tr>
                         <tr>
                             <td>
                                 <table style="border-collapse:collapse;text-align:left;border-radius:5px 5px 0 0;background-color:#ffffff;min-width:330px;max-width:100%" border="0" cellpadding="0" cellspacing="0">
                                     <tbody>
-                                        <tr>
+                                       <tr>
                                             <td align="left" valign="top">
                                                 <table bgcolor="#FAFAFA" width="100%" style="border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#ececec;border-radius:5px 5px 0 0" border="0" cellpadding="0" cellspacing="0">
                                                     <tbody>
@@ -132,11 +138,11 @@ class MailTemplates {
                                                                         </tr>
                                                                         <tr>
                                                                             <td valign="top" style="padding-bottom:30px;font-size:13px;line-height:1.3;font-family:Arial,helvetica,sans-serif">
-                ¡Hola <<USERNAME>>!
+                Hola <<USERNAME>>,
                                                                                 <br>
                                                                                 
-                    <h1>Tenemos una buena noticia para vos: ¡Hoy tenés una pausa revitalizadora!</h1>
-                    <br/><br/> <p> Por favor recordá llegar a horario y traer un co-pago de $5. 
+                    <h1>Tenemos una buena noticia para vos:<br/><br/>¡Hoy tenés una pausa revitalizadora!</h1>
+                    <br/><br/>  
 
                                                                                 </p>
 
@@ -175,7 +181,7 @@ class MailTemplates {
                                                         </tr>
                                                         <tr>
                                                             <td align="left" style="padding-bottom:20px;font-family:Arial,helvetica,sans-serif;color:#000000;font-size:13px">
-                Gracias por usar masaże.
+                <p>Por favor recordá llegar a horario y traer un co-pago de $5.</p>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -185,6 +191,9 @@ class MailTemplates {
                                     </tbody>
                                 </table>
                             </td>
+                        </tr>
+                       <tr>
+                            <td align="center" style="padding:20px;font-family:Arial,helvetica,sans-serif;color:#666666;font-size:11px">&nbsp;</td>
                         </tr>
                     </tbody>
                 </table>
@@ -199,6 +208,9 @@ class MailTemplates {
             <td align="center">
                 <table style="border-collapse:collapse;text-align:left;max-width:600px" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
+                       <tr>
+                            <td align="center" style="padding:20px;font-family:Arial,helvetica,sans-serif;color:#666666;font-size:11px">&nbsp;</td>
+                        </tr>
                         <tr>
                             <td>
                                 <table style="border-collapse:collapse;text-align:left;border-radius:5px 5px 0 0;background-color:#ffffff;min-width:330px;max-width:100%" border="0" cellpadding="0" cellspacing="0">
@@ -276,6 +288,9 @@ class MailTemplates {
                                     </tbody>
                                 </table>
                             </td>
+                        </tr>
+                         <tr>
+                            <td align="center" style="padding:20px;font-family:Arial,helvetica,sans-serif;color:#666666;font-size:11px">&nbsp;</td>
                         </tr>
                     </tbody>
                 </table>

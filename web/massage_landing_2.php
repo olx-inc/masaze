@@ -33,8 +33,8 @@ if ($connection->connect_error) {
 		
 		if ($result2 = $connection->query("insert ignore into masaze_appointments(user_id, elegible) values($user_id, 0);")) {
 			$result_status = 3;
-			$result_message_title = "Gracias!";
-			$result_message_desc = "Registramos tu solicitud. Te avisaremos por E-mail si te conseguimos una reserva.";
+			$result_message_title = "Registramos tu solicitud.";
+			$result_message_desc = "Te avisaremos por E-mail si te conseguimos una reserva.";
 		} else {
 			$result_status = 4;
 			$result_message_title = "Oops!";
@@ -67,6 +67,7 @@ if ($connection->connect_error) {
 			</header>
 			<section class="notifications icons icon-check-round">
 				<h2><?php echo $result_message_title ?></h2>
+				<br/><br/>
 				<p><?php echo $result_message_desc ?></p>
 			</section>
 		</div>
