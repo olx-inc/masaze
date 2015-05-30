@@ -38,7 +38,7 @@
 				<h4>Si querés enviar una notificación, hacé click aquí:</h4>
 				<br/>
 				<div class="button-content">
-					<a href="index.php?a=1" class="button">Enviar Solicitudes</a>
+					<a href="index.php?a=1" class="button">Enviar Invitaciones</a>
 				</div>
         <br/>
         <br/>
