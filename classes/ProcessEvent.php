@@ -11,7 +11,8 @@ class ProcessEvent {
     const ADMIN_MAIL_SUBJECT = 'Turnos concedidos';
     const MAIL_FROM = 'massages@olx.com';
     const NAME_FROM = 'massages@olx.com';
-    const SUBJECT = 'Tu turno de masajes';
+    const SUBJECT_CONFIRMED = 'Turno de Masajes Asignado';
+    const SUBJECT_INVITE = 'Te Invitamos a una Pausa...';
     const EMAIL_HOSTNAME = 'relay1.olx.com';
     const SMTP_HOST_1 = "mail-server";
     const SMTP_SERVER =  "smtp.betaolx.com.ar";
@@ -51,7 +52,7 @@ class ProcessEvent {
                 $this->mailer->Sender = self::MAIL_FROM;
                 $this->mailer->FromName = self::NAME_FROM;
                 $this->mailer->From = self::MAIL_FROM;
-                $this->mailer->Subject = self::SUBJECT;
+                $this->mailer->Subject = self::SUBJECT_INVITE;
                 $this->mailer->Body = $mailTemplate;
                 $this->mailer->AddAddress($toAddress, $toAddress);
 
@@ -76,7 +77,7 @@ class ProcessEvent {
                 $this->mailer->Sender = self::MAIL_FROM;
                 $this->mailer->FromName = self::NAME_FROM;
                 $this->mailer->From = self::MAIL_FROM;
-                $this->mailer->Subject = self::SUBJECT;
+                $this->mailer->Subject = self::SUBJECT_CONFIRMED;
                 $this->mailer->Body = $mailTemplate;
                 $this->mailer->AddAddress($toAddress, $toAddress);
 
@@ -170,11 +171,10 @@ class ProcessEvent {
         $template = str_replace($pattern, $mail['email'], $template);
         $template = str_replace($patternAppointment, $mail['time_schedules'], $template);
 
-        $scheduled = "<ul>";
+        $scheduled = "";
         foreach ($this->emailListSelected as $row) {
-          $scheduled .= "<li>" . $row['time_schedules'] . " - " . $row['email']  . "</li>";
+          $scheduled .= "<tr><td>" . $row['time_schedules'] . "</td><td>" . $row['email']  . "</td></tr>";
         }
-        $scheduled .= "</ul>";
 
         $template = str_replace($patternSchedule, $scheduled, $template);
 

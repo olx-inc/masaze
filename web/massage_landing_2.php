@@ -34,7 +34,7 @@ if ($connection->connect_error) {
 		if ($result2 = $connection->query("insert ignore into masaze_appointments(user_id, elegible) values($user_id, 0);")) {
 			$result_status = 3;
 			$result_message_title = "Registramos tu solicitud.";
-			$result_message_desc = "Te avisaremos por E-mail si te conseguimos una reserva.";
+			$result_message_desc = "Te avisaremos por E-mail si te asignamos una reserva.";
 		} else {
 			$result_status = 4;
 			$result_message_title = "Oops!";
