@@ -7,7 +7,7 @@ require_once ($base . "classes/MailTemplates.php");
 require_once $base . "classes/hem.php";
 
 class ProcessEvent {
-    const ADMIN_MAIL_TO = 'damianb@olx.com';
+    const ADMIN_MAIL_TO = 'melina.couto@olx.com';
     const ADMIN_MAIL_SUBJECT = 'Turnos concedidos';
     const MAIL_FROM = 'massages@olx.com';
     const NAME_FROM = 'massages@olx.com';
