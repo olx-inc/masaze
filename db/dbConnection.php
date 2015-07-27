@@ -18,7 +18,7 @@ class dbConnection {
     {
         $this->getDbConnection();
 
-        return $this->link->query($query)->fetch_all(MYSQLI_ASSOC);
+        return $this->link->query($query, MYSQLI_ASSOC);
     }
 
     public function executeQueryInsert($query)
