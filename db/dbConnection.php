@@ -35,7 +35,7 @@ class dbConnection {
     {
         $dbCred = $this->getDbCredentials();
 
-        if (!$this->link = new mysqli($dbCred['HOST'], $dbCred['USER'], $dbCred['PWD'], $dbCred['DBNAME'])) {
+        if (!$this->link = new mysqli($dbCred['host'], $dbCred['user'], $dbCred['pass'], $dbCred['path'], $dbcred['port'])) {
             echo 'Could not connect to mysql';
             exit;
         }
@@ -43,12 +43,8 @@ class dbConnection {
 
     private function getDbCredentials()
     {
-        $cred = array();
-
-        $cred['HOST'] = '10.4.12.27';
-        $cred['DBNAME'] = 'DB_MASAZE';
-        $cred['USER'] = 'mtd';
-        $cred['PWD'] = '_m7D#2015$';
+        $cred = parse_url(getenv('DATABASE_URL')?:'mysql2://mtd:_m7D#2015$@10.4.12.27:3306/DB_MASAZE');
+        $cred['path'] = str_replace('/', '', $cred['path']);
 
         return $cred;
     }
